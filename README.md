@@ -1,5 +1,9 @@
 # evertrue - Project for Evertrue
 
+## Prerequisites
+
+Before trying to run this application make sure that you have node and npm installed.
+
 ## Setup
 
 To start clone the repo and cd into it. Once in the directory run the command
