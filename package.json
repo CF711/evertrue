@@ -1,0 +1,23 @@
+{
+  "name": "evertrue",
+  "description": "Project for Evertrue",
+  "version": "1.0.0",
+  "repository": "https://github.com/CF711/evertrue",
+  "private": false,
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update"
+  }
+}

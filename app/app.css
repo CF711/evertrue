@@ -1,0 +1,125 @@
+.sidebar {
+	background-color:#E7E7E7;
+}
+
+.panel {
+	background-color:#E7E7E7;
+	border: 0px;
+}
+
+.groups-header {
+	color: white;
+	background-color: #6B909A;
+	font-weight: bold;
+	font-family: sans-serif, monospace;
+}
+
+.container {
+	background-color: #F5F5F5;
+	overflow-y: scroll;
+	top: 0;
+	bottom: 0;
+}
+
+.currentSection {
+	color: #6B909A;
+}
+
+.well {
+	background-color: white;
+}
+
+.wellName {
+	color: #92A6AD;
+	font-family: sans-serif, monospace;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.tableHeader {
+	background-color: #F2F6F7;
+	border-top: 1px solid #E1E5E6;
+	border-bottom: 1px solid #E1E5E6;
+	border-right: 1px solid #E1E5E6;
+	color: #839398;
+	width: 20%;
+}
+
+.table {
+	border: 1px solid #E1E5E6;
+	border-radius: 0.5px;
+}
+
+.evertrueFieldName {
+	color: #A9678D;
+	font-weight: bold;
+}
+
+.panel-title .groupName {
+	color: #65A8C2;
+	font-weight: bold;
+	font-family: sans-serif, monospace;
+}
+
+.panel-title .groupName:hover {
+	text-decoration: none;
+}
+
+.tableElement {
+	border-top: 1px solid #E1E5E6;
+	border-bottom: 1px solid #E1E5E6;
+	border-right: 1px solid #E1E5E6;
+}
+
+.fields-heading:hover {
+	cursor: pointer;
+}
+
+.panel-group .panel .panel-collapse .panel-body {
+	background-color: white;
+	border-top: 0px;
+	padding: 2px 15px;
+	cursor: pointer;
+}
+
+.in {
+	background-color: white;
+	color: black;
+}
+
+.panel-body a {
+	color: gray;
+	padding-left: 15px;
+	font-size: 16px;
+	font-family: serif, sans-serif, monospace;
+	border-left: 2px solid gray;
+	text-decoration: none;
+}
+
+.panel-collapse div div.active a{
+	color: #A9678D;
+	border-left: 2px solid #A9678D;
+	font-weight: bold;
+}
+
+.panel-collapse {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.sidebar-panel {
+	margin-top: 20px;
+}
+
+.usage {
+	font-weight: bold;
+}
+
+.panel .active-group {
+	background-color: white;
+	cursor: default;
+}
+
+.active-group .panel-title .groupName{
+	color: black;
+}

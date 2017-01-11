@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="evertrue" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Evertrue Coding Challenge</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="evertrueApp" ng-controller="EvertrueCtrl">
+    <div class="col-sm-3 sidebar" id="panel-container"> 
+      <div class="panel sidebar-panel">
+        <div class="panel-heading groups-header">
+          Field Groups
+        </div>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default" ng-repeat="group in groups">
+            <div id="{{group.id_name}}" class="panel-heading fields-heading" ng-click="openAccordion(group.id_name)">
+                  <h4 class="panel-title">
+                    <a class="groupName">
+                      {{ group.name }}
+                    </a>
+                  </h4>
+              </div>
+              <div id="{{group.id_name}}-panel" class="panel-collapse collapse">
+                <div ng-repeat="field in group.fields">
+                    <div class="panel-body" ng-click="scrollTarget(field.evertruefieldname, group.id_name)" id="panel-{{group.id_name}}-{{field.evertruefieldname}}">
+                  <a>
+                    {{ field.display_name }}
+                  </a>
+                </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container col-sm-9" id="groups-container">
+      <h3 class="currentSection">
+        {{ currentSection.name }}
+      </h3>
+      <div class="dataView" ng-repeat="field in currentSection.fields">
+        <div class="well" id="{{field.evertruefieldname}}">
+          <div class="wellName">
+            {{ field.display_name }}
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th class="tableHeader" scope="row">Type</th>
+                <td class="tableElement"> 
+                  <img src="/img/{{field.type}}" alt="{{field.type}}" />
+                  {{ field.type }} 
+                </td>
+              </tr>
+              <tr>
+                <th class="tableHeader" scope="row">Usage</th>
+                <td class="tableElement">
+                  <span class="usage" ng-repeat="usage in field.usage"> 
+                    <img src="/img/{{usage}}" alt="{{usage}}" /> 
+                    {{ usage }}
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <th class="tableHeader" scope="row">EverTrue Field Name</th>
+                <td class="evertrueFieldName tableElement"> {{ field.evertruefieldname }} </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
