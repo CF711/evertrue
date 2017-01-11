@@ -4,7 +4,7 @@ angular.module('evertrue', ['ngRoute', 'duScroll'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'evertrue/evertrue.html',
+    templateUrl: 'index.html',
     controller: 'EvertrueCtrl'
   });
 }])
